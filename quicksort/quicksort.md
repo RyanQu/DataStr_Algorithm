@@ -1,10 +1,10 @@
-#Data Structure & Algorithm
+# Data Structure & Algorithm
 
-##1. Sorting Algorithm
+## 1. Sorting Algorithm
 
-###1.1 Quicksort
+### 1.1 Quicksort
 
-####1.1.1 Brief
+#### 1.1.1 Brief
 
 Quicksort is an efficient and commonly used sorting algorithm, serving as a method that puts one number of array in correct place for each recursion. 
 
@@ -14,7 +14,7 @@ From efficiency aspect, quicksort is not a stable algorithm, meaning that the ti
 
 Consider quicksort is a kind of in-place algorithm, meaning that during sorting process there are only swap operations and no copy or cover operations, which indicates that only few addition memory will be needed in the process.
 
-####1.1.2 Algorithm
+#### 1.1.2 Algorithm
 
 Suppose, we have an array of integers `A = [1,6,3,2,5,8,7,4]` as input and the supposed output after quicksort is `A=[1,2,3,4,5,6,7,8]`.
 
@@ -88,9 +88,10 @@ The main idea of quicksort is recursion. Our mission is to seperate the array in
 
 	In this case, `A[0:bar+1]` is `[A[0],A[1],A[2]]`, `A[bar+2:len(A)]` is `[A[4],A[5],A[6],A[7]]`. Because number 4 is already find the correct place to stay in, so it won't join the recursion.
 	
-####1.1.3 Python Code
+#### 1.1.3 Python Code
 
 ~~~python
+
 A = [1,6,3,2,5,8,7,4]
 
 def part(A,s,r):
@@ -115,7 +116,7 @@ qsort(A,0,len(A)-1)
 print A
 ~~~
 
-####1.1.4 C++ Code
+#### 1.1.4 C++ Code
 
 ~~~c++
 #include "iostream"
@@ -165,7 +166,7 @@ int main(){
 
 ~~~
 
-####1.1.5 Time Complexity
+#### 1.1.5 Time Complexity
 
 **Worst case**
 
@@ -183,7 +184,7 @@ The best case is the most balanced case, each recursion we divide the list into 
 
 We could use recursion function to solve the average time complexity. See the prove on Wikipedia: [Quicksort](https://en.wikipedia.org/wiki/Quicksort)
 
-####1.1.6 Optimization
+#### 1.1.6 Optimization
 
 By the definition of worst case, we could easily find that the sorted array (positive sequence or inverse) may cause the worst time complexity. To solve this problem and to optimize the algorithm, we could use following approaches: 
  
