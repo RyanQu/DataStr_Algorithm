@@ -1,14 +1,23 @@
 #Data Structure & Algorithm
+
 ##1. Sorting Algorithm
+
 ###1.1 Quicksort
+
 ####1.1.1 Brief
+
 Quicksort is an efficient and commonly used sorting algorithm, serving as a method that puts one number of array in correct place for each recursion. 
+
 Quicksort is a comparison sort, which indicates that for any kind of dataset that the relation of less or greater than is defined it will work.
+
 From efficiency aspect, quicksort is not a stable algorithm, meaning that the time complexity of quicksort is not same for average and worst case.
+
 Consider quicksort is a kind of in-place algorithm, meaning that during sorting process there are only swap operations and no copy or cover operations, which indicates that only few addition memory will be needed in the process.
 
 ####1.1.2 Algorithm
+
 Suppose, we have an array of integers `A = [1,6,3,2,5,8,7,4]` as input and the supposed output after quicksort is `A=[1,2,3,4,5,6,7,8]`.
+
 The main idea of quicksort is recursion. Our mission is to seperate the array into two subarray, less than and great than, then use same algorithm on subarray again.
 
 1. We choose the last number of array as a `key`, in this case, `key = 4`, and `A[len(A)-1] = key`.
@@ -26,6 +35,7 @@ The main idea of quicksort is recursion. Our mission is to seperate the array in
 	Value  |      |  1  |  6  |  3  |  2  |  5  |  8  |  7  |  4  |
 
 3. For `i` in the range of indices, meaning `i++` for each step, do the loop: 
+
 	if the value of `A[i]` is less than `key`, `bar++` and then swap `A[bar]` and `A[i]`.
 	
 	In this instance, for `i=0`, `bar=-1`, `A[i]=1` is less than `key`, so `bar++`, `bar=0`, then swap `A[bar]` and `A[i]`. Because `i==bar` in this case, nothing will change. We have:
@@ -79,6 +89,7 @@ The main idea of quicksort is recursion. Our mission is to seperate the array in
 	In this case, `A[0:bar+1]` is `[A[0],A[1],A[2]]`, `A[bar+2:len(A)]` is `[A[4],A[5],A[6],A[7]]`. Because number 4 is already find the correct place to stay in, so it won't join the recursion.
 	
 ####1.1.3 Python Code
+
 ~~~python
 A = [1,6,3,2,5,8,7,4]
 
@@ -105,6 +116,7 @@ print A
 ~~~
 
 ####1.1.4 C++ Code
+
 ~~~c++
 #include "iostream"
 using namespace std;
@@ -154,20 +166,25 @@ int main(){
 ~~~
 
 ####1.1.5 Time Complexity
+
 **Worst case**
+
 The worst case is the most unbalanced partition when we divide the list into two sublists of sizes $0$ and $n − 1$. This may occur if the key happens to be the smallest or largest element in the list. 
 If it happens to all the recursion steps, we will have every recursion is just dealing with the list whose size is 1 smaller than the previous one. In this case, we will have $n − 1$ steps of recursion, each recursion dealing with $n − 1$ numbers. So we could have the time complexity:
 \\[ f(n)=\sum_{i=0}^{n-1}i=O(n^2)\\]
 
 **Best case**
+
 The best case is the most balanced case, each recursion we divide the list into two nearly equal subarrays. This means each recursive call processes a list of half the size. It's easy to prove that we only have $\log n$ recursion step to get the size of array into 1. And we could prove that for each level of recursion, including all the subarrays in this level, it needs only $O(n)$. So we could have the time complexity:
 
 \\[ f(n) = O(n)\cdot O(\log n)=O(n\log n)\\]
 
 **Average case**
+
 We could use recursion function to solve the average time complexity. See the prove on Wikipedia: [Quicksort](https://en.wikipedia.org/wiki/Quicksort)
 
 ####1.1.6 Optimization
+
 By the definition of worst case, we could easily find that the sorted array (positive sequence or inverse) may cause the worst time complexity. To solve this problem and to optimize the algorithm, we could use following approaches: 
  
 1. Choose key randomly.
