@@ -1,10 +1,10 @@
-#Data Structure & Algorithm
+# Data Structure & Algorithm
 
-##1. Sorting Algorithm
+## 1. Sorting Algorithm
 
-###1.2 Insertion Sort
+### 1.2 Insertion Sort
 
-####1.2.1 Brief
+#### 1.2.1 Brief
 
 Insertion sort is a simple sorting algorithm, could be done in 3 lines of codes, which place one element on its correct order each time. The main idea of insertion sort is to build up the sorted array in-place, and insert the unsorted element into sorted array by inverse search and comparison.
 
@@ -16,7 +16,7 @@ The average and worst time complexity of insertion sort is $O(n^2)$, the best ca
 
 Insertion sort, as we mentioned in quicksort, performs well in small dataset so we could use insertion sort to optimize quicksort when the lenth of subarray is less than a threshold.
 
-####1.2.2 Algorithm
+#### 1.2.2 Algorithm
 Suppose, we have an array of integers `A = [1,6,3,2,5,8,7,4]` as input and the supposed output after quicksort is `A=[1,2,3,4,5,6,7,8]`.
 
 The main idea of insertion sort is to update the sorted array with one new element in unsorted part each iteration.
@@ -83,7 +83,7 @@ The main idea of insertion sort is to update the sorted array with one new eleme
 	Pointer|     |     |     |     |     |     |     |     |
 	Value  |**1**|**2**|**3**|**4**|**5**|**6**|**7**|**8**|
 
-####1.2.3 Python Code
+#### 1.2.3 Python Code
 
 ~~~python
 
@@ -100,7 +100,7 @@ print A
 
 ~~~
 
-####1.2.4 C++ Code
+#### 1.2.4 C++ Code
 
 ~~~cpp
 #include "iostream"
@@ -126,7 +126,7 @@ int main(){
 }
 ~~~
 
-####1.2.5 Time Complexity
+#### 1.2.5 Time Complexity
 
 **Best case**
 
