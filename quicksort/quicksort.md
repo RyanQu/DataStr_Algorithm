@@ -8,6 +8,10 @@
 
 Quicksort is an efficient and commonly used sorting algorithm, serving as a method that puts one number of array in correct place for each recursion. 
 
+![quicksort](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
+
+(Image form Wikipedia)
+
 Quicksort is a comparison sort, which indicates that for any kind of dataset that the relation of less or greater than is defined it will work.
 
 From efficiency aspect, quicksort is not a stable algorithm, meaning that the time complexity of quicksort is not same for average and worst case.
