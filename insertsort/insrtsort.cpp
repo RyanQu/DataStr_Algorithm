@@ -3,8 +3,8 @@ using namespace std;
 
 void insert_sort(int A[],int lenth){
     for (int i=1;i<lenth;i++){
-        for (int j=i-1;j>0;j--){
-            if (A[j+1]<A[j]) swap(A[j+1],A[j]);
+        for (int j=i;j>0;j--){
+            if (A[j-1]>A[j]) swap(A[j-1],A[j]);
         }
     }
 }

@@ -90,9 +90,9 @@ The main idea of insertion sort is to update the sorted array with one new eleme
 A = [1,6,3,2,5,8,7,4]
 
 def insert_sort(A):
-    for i in range(len(A)):
-        for j in range(i-1,0,-1):
-            if A[j+1]<A[j]: A[j+1], A[j] = A[j], A[j+1]
+    for i in range(1,len(A)):
+        for j in range(i,0,-1):
+            if A[j-1]>A[j]: A[j-1], A[j] = A[j], A[j-1]
     return A
 
 insert_sort(A)
@@ -108,8 +108,8 @@ using namespace std;
 
 void insert_sort(int A[],int lenth){
     for (int i=1;i<lenth;i++){
-        for (int j=i-1;j>0;j--){
-            if (A[j+1]<A[j]) swap(A[j+1],A[j]);
+        for (int j=i;j>0;j--){
+            if (A[j-1]>A[j]) swap(A[j-1],A[j]);
         }
     }
 }

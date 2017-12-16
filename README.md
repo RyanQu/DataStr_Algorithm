@@ -288,9 +288,9 @@ The main idea of insertion sort is to update the sorted array with one new eleme
 A = [1,6,3,2,5,8,7,4]
 
 def insert_sort(A):
-    for i in range(len(A)):
-        for j in range(i-1,0,-1):
-            if A[j+1]<A[j]: A[j+1], A[j] = A[j], A[j+1]
+    for i in range(1,len(A)):
+        for j in range(i,0,-1):
+            if A[j-1]>A[j]: A[j-1], A[j] = A[j], A[j-1]
     return A
 
 insert_sort(A)
@@ -306,8 +306,8 @@ using namespace std;
 
 void insert_sort(int A[],int lenth){
     for (int i=1;i<lenth;i++){
-        for (int j=i-1;j>0;j--){
-            if (A[j+1]<A[j]) swap(A[j+1],A[j]);
+        for (int j=i;j>0;j--){
+            if (A[j-1]>A[j]) swap(A[j-1],A[j]);
         }
     }
 }
@@ -337,3 +337,29 @@ Inversive sorted array is one of worst case. For all iterations, it needs `i` ti
 **Average case**
 
 In average case, we could imagine that the insertion sort need to swap half of elements in the array. So, we could say that the average case is also quadratic, which makes insertion sort impractical for sorting large arrays. 
+
+### 1.3 Merge Sort
+
+### 1.4 Heap Sort
+
+### 1.5 Selection Sort
+
+### 1.6 Bubble Sort
+
+### 1.7 Shell Sort
+
+### 1.8 Counting Sort
+
+### 1.9 Bucket Sort
+
+### 1.10 Radix Sort
+
+## 2. Basic Data Structure
+
+### 2.1 Queue
+
+### 2.2 Stack
+
+### 2.3 Linked List
+
+### 2.4 Binary Tree
